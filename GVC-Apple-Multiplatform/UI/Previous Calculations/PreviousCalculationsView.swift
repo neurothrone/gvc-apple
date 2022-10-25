@@ -9,59 +9,51 @@ import GVCCore
 import SwiftUI
 
 struct PreviousCalculationsView: View {
-  let calculations: [CalculationModel]
+  @Environment(\.managedObjectContext) private var viewContext
   
-  init(calculations: [CalculationModel] = CalculationModel.Preview.samples) {
-    self.calculations = calculations
-  }
+  @FetchRequest(
+    fetchRequest: CalculationModel.all,
+    animation: .easeInOut
+  )
+  private var calculationModels
   
   var body: some View {
     List {
-      ForEach(calculations) { calculation in
-          VStack(alignment: .leading) {
-            HStack {
-              Text("NPS")
-                .foregroundColor(.accentColor)
-              
-              Spacer()
-              
-              Text(calculation.nps.toString)
-            }
-            HStack {
-              Text("Length")
-                .foregroundColor(.accentColor)
-              
-              Spacer()
-              
-              Text(calculation.length, format: .localCurrency)
-            }
-            HStack {
-              Text("Pressure")
-                .foregroundColor(.accentColor)
-              
-              Spacer()
-              
-              Text(calculation.pressure, format: .localCurrency)
-            }
-            
-            HStack {
-              Text("Gas Volume")
-                .foregroundColor(.accentColor)
-              
-              Spacer()
-              
-              Text(calculation.result.toCurrentLocale)
-                .font(.headline)
-            }
-            
-            HStack {
-              Text("Calculated at")
-              Spacer()
-              Text(calculation.calculatedAt.formatted(date: .abbreviated, time: .omitted))
-            }
-            .foregroundColor(.secondary)
-            .padding(.top, 10)
+      ForEach(calculationModels) { model in
+        VStack(alignment: .leading) {
+          HStack {
+            Text("NPS")
+              .foregroundColor(.accentColor)
+            Spacer()
+            Text(model.nps.toString)
           }
+          HStack {
+            Text("Length")
+              .foregroundColor(.accentColor)
+            Spacer()
+            Text(model.length, format: .localCurrency)
+          }
+          HStack {
+            Text("Pressure")
+              .foregroundColor(.accentColor)
+            Spacer()
+            Text(model.pressure, format: .localCurrency)
+          }
+          HStack {
+            Text("Gas Volume")
+              .foregroundColor(.accentColor)
+            Spacer()
+            Text(model.result.toCurrentLocale)
+              .font(.headline)
+          }
+          HStack {
+            Text("Calculated at")
+            Spacer()
+            Text(model.calculatedAt.formatted(date: .abbreviated, time: .omitted))
+          }
+          .foregroundColor(.secondary)
+          .padding(.top, 10)
+        }
       }
     }
   }
@@ -69,7 +61,10 @@ struct PreviousCalculationsView: View {
 
 struct PreviousCalculationsView_Previews: PreviewProvider {
   static var previews: some View {
-    PreviousCalculationsView(calculations: CalculationModel.Preview.samples)
-//      .preferredColorScheme(.dark)
+    let context = CoreDataProvider.preview.viewContext
+    
+    PreviousCalculationsView()
+      .environment(\.managedObjectContext, context)
+    //      .preferredColorScheme(.dark)
   }
 }

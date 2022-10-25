@@ -24,7 +24,11 @@
 		2F38937D2908390400E0FF86 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38937C2908390400E0FF86 /* Double+Extensions.swift */; };
 		2F38938329083E4500E0FF86 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938229083E4500E0FF86 /* Tab.swift */; };
 		2F3893862908624B00E0FF86 /* CalculationModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */; };
-		2F389388290863A900E0FF86 /* CalculationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F389387290863A900E0FF86 /* CalculationModel.swift */; };
+		2F38938B290866E500E0FF86 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938A290866E500E0FF86 /* CoreDataProvider.swift */; };
+		2F38938E2908674C00E0FF86 /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938C2908674C00E0FF86 /* Entities.xcdatamodeld */; };
+		2F3893912908697C00E0FF86 /* CalculationModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938F2908697C00E0FF86 /* CalculationModel+CoreData.swift */; };
+		2F389394290869F700E0FF86 /* CalculationModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F389393290869F700E0FF86 /* CalculationModel+Extensions.swift */; };
+		2F38939629086B3000E0FF86 /* CoreDataProvider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */; };
 		2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */; };
 		2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50EB2907EC4400B1D9AB /* ContentView.swift */; };
 		2F3E50EE2907EC4500B1D9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */; };
@@ -50,7 +54,11 @@
 		2F38937C2908390400E0FF86 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		2F38938229083E4500E0FF86 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+Preview.swift"; sourceTree = "<group>"; };
-		2F389387290863A900E0FF86 /* CalculationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationModel.swift; sourceTree = "<group>"; };
+		2F38938A290866E500E0FF86 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		2F38938D2908674C00E0FF86 /* Entities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entities.xcdatamodel; sourceTree = "<group>"; };
+		2F38938F2908697C00E0FF86 /* CalculationModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+CoreData.swift"; sourceTree = "<group>"; };
+		2F389393290869F700E0FF86 /* CalculationModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+Extensions.swift"; sourceTree = "<group>"; };
+		2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataProvider+Extensions.swift"; sourceTree = "<group>"; };
 		2F3E50E62907EC4400B1D9AB /* GVC-Apple-Multiplatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GVC-Apple-Multiplatform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasVolumeCalculatorApp.swift; sourceTree = "<group>"; };
 		2F3E50EB2907EC4400B1D9AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,9 +160,21 @@
 		2F3893842908622D00E0FF86 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2F389387290863A900E0FF86 /* CalculationModel.swift */,
+				2F3893892908663900E0FF86 /* CoreData */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		2F3893892908663900E0FF86 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2F38938A290866E500E0FF86 /* CoreDataProvider.swift */,
+				2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */,
+				2F38938F2908697C00E0FF86 /* CalculationModel+CoreData.swift */,
+				2F389393290869F700E0FF86 /* CalculationModel+Extensions.swift */,
+				2F38938C2908674C00E0FF86 /* Entities.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		2F3E50DD2907EC4400B1D9AB = {
@@ -286,18 +306,22 @@
 				2F38937D2908390400E0FF86 /* Double+Extensions.swift in Sources */,
 				2F3893732908215D00E0FF86 /* CalculateResultView.swift in Sources */,
 				2F38935F29080C0700E0FF86 /* MainScreen.swift in Sources */,
-				2F389388290863A900E0FF86 /* CalculationModel.swift in Sources */,
+				2F38938B290866E500E0FF86 /* CoreDataProvider.swift in Sources */,
+				2F3893912908697C00E0FF86 /* CalculationModel+CoreData.swift in Sources */,
 				2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */,
 				2F3893862908624B00E0FF86 /* CalculationModel+Preview.swift in Sources */,
 				2F3893772908248800E0FF86 /* NPSLinkView.swift in Sources */,
 				2F38936F290819ED00E0FF86 /* FormatStyle+Extensions.swift in Sources */,
 				2F38936829080CA000E0FF86 /* LocalizedStrings.swift in Sources */,
+				2F38939629086B3000E0FF86 /* CoreDataProvider+Extensions.swift in Sources */,
 				2F3893752908230D00E0FF86 /* SectionHeaderView.swift in Sources */,
 				2F38937B2908378100E0FF86 /* NumberFormatter+Extensions.swift in Sources */,
 				2F38936B29080EE100E0FF86 /* NPSSelectionView.swift in Sources */,
 				2F38938329083E4500E0FF86 /* Tab.swift in Sources */,
+				2F389394290869F700E0FF86 /* CalculationModel+Extensions.swift in Sources */,
 				2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */,
 				2F3893792908273700E0FF86 /* PreviousCalculationsView.swift in Sources */,
+				2F38938E2908674C00E0FF86 /* Entities.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +573,19 @@
 			productName = GVCCore;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2F38938C2908674C00E0FF86 /* Entities.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F38938D2908674C00E0FF86 /* Entities.xcdatamodel */,
+			);
+			currentVersion = 2F38938D2908674C00E0FF86 /* Entities.xcdatamodel */;
+			path = Entities.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2F3E50DE2907EC4400B1D9AB /* Project object */;
 }

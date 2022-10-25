@@ -14,6 +14,8 @@ struct MainScreen: View {
     case pressure
   }
   
+  @Environment(\.managedObjectContext) private var viewContext
+  
   @FocusState private var focusedField: Field?
   
   @AppStorage("selectedNPS")
@@ -144,6 +146,14 @@ extension MainScreen {
       pressure: pressureValue
     )
     
+    CalculationModel.createWith(
+      nps: selectedNPS,
+      length: length,
+      pressure: pressureValue,
+      result: result,
+      using: viewContext
+    )
+    
     focusedField = nil
   }
 }
@@ -151,5 +161,6 @@ extension MainScreen {
 struct MainScreen_Previews: PreviewProvider {
   static var previews: some View {
     MainScreen()
+      .environment(\.managedObjectContext, CoreDataProvider.preview.viewContext)
   }
 }

@@ -11,4 +11,10 @@ extension Double {
   var toCurrentLocale: String {
     NumberFormatter.customFormatter.string(from: self as NSNumber) ?? ""
   }
+  
+  static func random(in range: ClosedRange<Double>, withDecimals: Int) -> Double {
+    let unroundedRandom = Double.random(in: range)
+    let roundedString = String(format: "%.\(withDecimals)f", unroundedRandom)
+    return Double(roundedString) ?? .zero
+  }
 }
