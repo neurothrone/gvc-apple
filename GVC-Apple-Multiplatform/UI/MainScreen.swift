@@ -28,7 +28,7 @@ struct MainScreen: View {
   @State private var pressure: Double = .zero
   @State private var result: Double = .zero
   
-  var isInputValid: Bool {
+  private var isInputValid: Bool {
     if length == .zero { return false }
     
     if selectedPressure == .custom && pressure == .zero {
@@ -57,17 +57,17 @@ struct MainScreen: View {
     }
   }
   
-  var content: some View {
+  private var content: some View {
     Form {
       npsSection
       lengthSection
       pressureSection
       calculateButton
-      resultSection
+      CalculateResultView(value: $result)
     }
   }
   
-  var npsSection: some View {
+  private var npsSection: some View {
     Section {
       NavigationLink {
         NPSSelectionView(selection: $selectedNPS)
@@ -75,81 +75,56 @@ struct MainScreen: View {
         Text(selectedNPS.toString)
       }
     } header: {
-      HStack {
-        Text("\(LocalizedStrings.Form.npsPickerLabel) - DN (mm)")
-      }
-      .font(.headline)
+      SectionHeaderView(text: LocalizedStrings.Form.npsPickerLabel)
     } footer: {
-      Link(destination: URL(string: "https://en.wikipedia.org/wiki/Nominal_Pipe_Size#NPS_tables_for_selected_sizes")!
-      ) {
-        HStack(alignment: .center) {
-          Text(LocalizedStrings.Form.npsFooterText)
-            .font(.footnote)
-          Image(systemName: "link.circle.fill")
-        }
-      }
+      NPSLinkView()
     }
-    .textCase(.none)
   }
   
-  var lengthSection: some View {
+  private var lengthSection: some View {
     Section {
-      DecimalTextFieldView(value: $length, placeholder: LocalizedStrings.Form.lengthFieldPlaceholder)
-        .focused($focusedField, equals: .length)
+      DecimalTextFieldView(
+        value: $length,
+        placeholder: LocalizedStrings.Form.lengthFieldPlaceholder
+      )
+      .focused($focusedField, equals: .length)
     } header: {
-      Text(LocalizedStrings.Form.lengthFieldLabel + " (m)")
-        .font(.headline)
+      SectionHeaderView(text: LocalizedStrings.Form.lengthFieldLabel)
     }
-    .textCase(.none)
   }
   
-  var pressureSection: some View {
+  private var pressureSection: some View {
     Section {
       Picker(
         LocalizedStrings.Form.pressurePickerHint,
-        selection: $selectedPressure) {
-          ForEach(PressureSelection.allCases) {
-            Text($0.toString)
-          }
+        selection: $selectedPressure
+      ) {
+        ForEach(PressureSelection.allCases) {
+          Text($0.toString)
         }
-        .pickerStyle(.segmented)
-        .onChange(of: selectedPressure) { _ in
-          isCustomPressure = selectedPressure == .custom
-        }
+      }
+      .pickerStyle(.segmented)
+      .onChange(of: selectedPressure) { _ in
+        isCustomPressure = selectedPressure == .custom
+      }
       
       if isCustomPressure {
-        DecimalTextFieldView(value: $pressure, placeholder: LocalizedStrings.Form.pressureFieldPlaceholder)
-          .focused($focusedField, equals: .pressure)
+        DecimalTextFieldView(
+          value: $pressure,
+          placeholder: LocalizedStrings.Form.pressureFieldPlaceholder
+        )
+        .focused($focusedField, equals: .pressure)
       }
     } header: {
-      Text(LocalizedStrings.Form.pressureLabel + " (mbar)")
-        .font(.headline)
+      SectionHeaderView(text: LocalizedStrings.Form.pressureLabel)
     }
-    .textCase(.none)
   }
   
-  var calculateButton: some View {
+  private var calculateButton: some View {
     Button(action: calculate) {
       Text(LocalizedStrings.Form.calculateButtonText)
     }
     .disabled(!isInputValid)
-  }
-  
-  var resultSection: some View {
-    Section {
-      Text(result.formatted())
-    } header: {
-      HStack {
-        Text(LocalizedStrings.Form.resultLabel)
-        Text("(m") +
-        Text("3")
-          .font(.system(size: 8.0))
-          .baselineOffset(6.0) +
-        Text(")")
-      }
-      .font(.headline)
-    }
-    .textCase(.none)
   }
 }
 

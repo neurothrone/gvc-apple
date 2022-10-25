@@ -15,6 +15,10 @@
 		2F38936929080CA000E0FF86 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F38936529080CA000E0FF86 /* Localizable.strings */; };
 		2F38936B29080EE100E0FF86 /* NPSSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38936A29080EE100E0FF86 /* NPSSelectionView.swift */; };
 		2F38936F290819ED00E0FF86 /* FormatStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38936E290819ED00E0FF86 /* FormatStyle+Extensions.swift */; };
+		2F38937129081E2200E0FF86 /* PressureSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38937029081E2200E0FF86 /* PressureSelectionView.swift */; };
+		2F3893732908215D00E0FF86 /* CalculateResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893722908215D00E0FF86 /* CalculateResultView.swift */; };
+		2F3893752908230D00E0FF86 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893742908230D00E0FF86 /* SectionHeaderView.swift */; };
+		2F3893772908248800E0FF86 /* NPSLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893762908248800E0FF86 /* NPSLinkView.swift */; };
 		2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */; };
 		2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50EB2907EC4400B1D9AB /* ContentView.swift */; };
 		2F3E50EE2907EC4500B1D9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 		2F38936629080CA000E0FF86 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Localizable.strings; sourceTree = "<group>"; };
 		2F38936A29080EE100E0FF86 /* NPSSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSSelectionView.swift; sourceTree = "<group>"; };
 		2F38936E290819ED00E0FF86 /* FormatStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle+Extensions.swift"; sourceTree = "<group>"; };
+		2F38937029081E2200E0FF86 /* PressureSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureSelectionView.swift; sourceTree = "<group>"; };
+		2F3893722908215D00E0FF86 /* CalculateResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateResultView.swift; sourceTree = "<group>"; };
+		2F3893742908230D00E0FF86 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		2F3893762908248800E0FF86 /* NPSLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSLinkView.swift; sourceTree = "<group>"; };
 		2F3E50E62907EC4400B1D9AB /* GVC-Apple-Multiplatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GVC-Apple-Multiplatform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasVolumeCalculatorApp.swift; sourceTree = "<group>"; };
 		2F3E50EB2907EC4400B1D9AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,7 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				2F38935E29080C0700E0FF86 /* MainScreen.swift */,
+				2F3893762908248800E0FF86 /* NPSLinkView.swift */,
+				2F3893742908230D00E0FF86 /* SectionHeaderView.swift */,
+				2F3893722908215D00E0FF86 /* CalculateResultView.swift */,
 				2F38936A29080EE100E0FF86 /* NPSSelectionView.swift */,
+				2F38937029081E2200E0FF86 /* PressureSelectionView.swift */,
 				2F38935C29080B8F00E0FF86 /* DecimalTextFieldView.swift */,
 			);
 			path = UI;
@@ -219,11 +231,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F38937129081E2200E0FF86 /* PressureSelectionView.swift in Sources */,
 				2F38935D29080B8F00E0FF86 /* DecimalTextFieldView.swift in Sources */,
+				2F3893732908215D00E0FF86 /* CalculateResultView.swift in Sources */,
 				2F38935F29080C0700E0FF86 /* MainScreen.swift in Sources */,
 				2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */,
+				2F3893772908248800E0FF86 /* NPSLinkView.swift in Sources */,
 				2F38936F290819ED00E0FF86 /* FormatStyle+Extensions.swift in Sources */,
 				2F38936829080CA000E0FF86 /* LocalizedStrings.swift in Sources */,
+				2F3893752908230D00E0FF86 /* SectionHeaderView.swift in Sources */,
 				2F38936B29080EE100E0FF86 /* NPSSelectionView.swift in Sources */,
 				2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */,
 			);

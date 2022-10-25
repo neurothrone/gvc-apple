@@ -16,16 +16,16 @@
 "Gas Volume Calculator" = "Gasvolym Beräkning";
 
 /* A length value in meters */
-"Length" = "Längd";
+"Length (m)" = "Längd (m)";
 
 /* An established standard used for measuring the radius of a pipe's inner size */
-"Nominal Pipe Size" = "Nominell rörstorlek";
+"Nominal Pipe Size - DN (mm)" = "Nominell rörstorlek - DN (mm)";
 
 /* Footnote text for NPS */
 "Learn more about NPS standards at this link" = "Läs mer om NPS-standarder på den här länken";
 
 /* A pressure value in millibars */
-"Pressure" = "Övertryck";
+"Pressure (mbar)" = "Övertryck (mbar)";
 
 /* Select a dimension: Nominal Pipe Size from the Picker */
 "Select a dimension" = "Välj en dimension";

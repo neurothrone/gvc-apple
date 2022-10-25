@@ -16,7 +16,7 @@ enum LocalizedStrings {
   
   struct Form {
     static let npsPickerLabel = NSLocalizedString(
-      "Nominal Pipe Size",
+      "Nominal Pipe Size - DN (mm)",
       comment: "An established standard used for measuring the radius of a pipe's inner size")
     static let npsPickerHint = NSLocalizedString(
       "Select a dimension",
@@ -26,7 +26,7 @@ enum LocalizedStrings {
       comment: "Footnote text for NPS")
     
     static let lengthFieldLabel = NSLocalizedString(
-      "Length",
+      "Length (m)",
       comment: "A length value in meters")
     static let lengthFieldPlaceholder = NSLocalizedString(
       "Type in a length",
@@ -34,7 +34,7 @@ enum LocalizedStrings {
     )
     
     static let pressureLabel = NSLocalizedString(
-      "Pressure",
+      "Pressure (mbar)",
       comment: "A pressure value in millibars")
     static let pressurePickerHint = NSLocalizedString(
       "Select a pressure",
