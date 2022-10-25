@@ -55,7 +55,15 @@ struct PreviousCalculationsView: View {
           .padding(.top, 10)
         }
       }
+      .onDelete(perform: delete)
     }
+  }
+}
+
+extension PreviousCalculationsView {
+  private func delete(atOffsets: IndexSet) {
+    guard let index = atOffsets.first else { return }
+    calculationModels[index].delete(using: viewContext)
   }
 }
 
