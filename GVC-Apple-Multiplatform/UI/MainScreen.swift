@@ -80,10 +80,11 @@ struct MainScreen: View {
       }
       .font(.headline)
     } footer: {
-      HStack {
-        Text("Learn more about NPS standards at this link")
-        Link(destination: URL(string: "https://en.wikipedia.org/wiki/Nominal_Pipe_Size#NPS_tables_for_selected_sizes")!
-        ) {
+      Link(destination: URL(string: "https://en.wikipedia.org/wiki/Nominal_Pipe_Size#NPS_tables_for_selected_sizes")!
+      ) {
+        HStack(alignment: .center) {
+          Text(LocalizedStrings.Form.npsFooterText)
+            .font(.footnote)
           Image(systemName: "link.circle.fill")
         }
       }

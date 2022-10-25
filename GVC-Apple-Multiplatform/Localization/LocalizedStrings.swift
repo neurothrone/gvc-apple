@@ -21,6 +21,9 @@ enum LocalizedStrings {
     static let npsPickerHint = NSLocalizedString(
       "Select a dimension",
       comment: "Select a NPS: Nominal Pipe Size from the Picker")
+    static let npsFooterText = NSLocalizedString(
+      "Learn more about NPS standards at this link",
+      comment: "Footnote text for NPS")
     
     static let lengthFieldLabel = NSLocalizedString(
       "Length",

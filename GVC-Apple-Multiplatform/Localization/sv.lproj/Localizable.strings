@@ -21,6 +21,9 @@
 /* An established standard used for measuring the radius of a pipe's inner size */
 "Nominal Pipe Size" = "Nominell rörstorlek";
 
+/* Footnote text for NPS */
+"Learn more about NPS standards at this link" = "Läs mer om NPS-standarder på den här länken";
+
 /* A pressure value in millibars */
 "Pressure" = "Övertryck";
 
