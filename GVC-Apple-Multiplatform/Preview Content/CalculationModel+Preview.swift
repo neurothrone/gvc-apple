@@ -10,6 +10,17 @@ import GVCCore
 
 extension CalculationModel {
   enum Preview {
+    static func generateSample(using context: NSManagedObjectContext) -> CalculationModel {
+      let model = CalculationModel(context: context)
+      model.nps = .threeHundred
+      model.length = 2400
+      model.pressure = 4000
+      model.result = GVCCore.calculateGasVolume(nps: model.nps, length: model.length, pressure: model.pressure)
+      
+      model.save(using: context)
+      return model
+    }
+    
     static func generateSamples(using context: NSManagedObjectContext) {
       for _ in 1...5 {
         let nps = NPSSelection.allCases.randomElement() ?? .threeHundred
@@ -17,7 +28,7 @@ extension CalculationModel {
         let pressure = Double.random(in: 30...4000, withDecimals: Int.random(in: 0...3))
         let result = GVCCore.calculateGasVolume(nps: nps, length: length, pressure: pressure)
         
-        CalculationModel.createWith(
+        let _ = CalculationModel.createWith(
           nps: nps,
           length: length,
           pressure: pressure,

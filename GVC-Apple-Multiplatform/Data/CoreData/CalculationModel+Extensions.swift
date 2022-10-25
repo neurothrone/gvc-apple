@@ -16,7 +16,7 @@ extension CalculationModel {
     pressure: Double,
     result: Double,
     using context: NSManagedObjectContext
-  ) {
+  ) -> CalculationModel {
     let model = CalculationModel(context: context)
     model.nps = nps
     model.length = length
@@ -24,6 +24,7 @@ extension CalculationModel {
     model.result = result
     
     model.save(using: context)
+    return model
   }
   
   func save(using context: NSManagedObjectContext) {

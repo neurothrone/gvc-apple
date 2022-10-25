@@ -12,9 +12,9 @@ private extension Tab {
   var view: some View {
     switch self {
     case .calculate:
-      MainScreen()
+      CalculateScreen()
     case .previousCalculations:
-      PreviousCalculationsView()
+      PreviousCalculationsScreen()
     }
   }
 }
