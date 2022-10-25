@@ -22,6 +22,9 @@
 		2F3893792908273700E0FF86 /* PreviousCalculationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893782908273700E0FF86 /* PreviousCalculationsView.swift */; };
 		2F38937B2908378100E0FF86 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38937A2908378100E0FF86 /* NumberFormatter+Extensions.swift */; };
 		2F38937D2908390400E0FF86 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38937C2908390400E0FF86 /* Double+Extensions.swift */; };
+		2F38938329083E4500E0FF86 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938229083E4500E0FF86 /* Tab.swift */; };
+		2F3893862908624B00E0FF86 /* CalculationModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */; };
+		2F389388290863A900E0FF86 /* CalculationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F389387290863A900E0FF86 /* CalculationModel.swift */; };
 		2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */; };
 		2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50EB2907EC4400B1D9AB /* ContentView.swift */; };
 		2F3E50EE2907EC4500B1D9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		2F3893782908273700E0FF86 /* PreviousCalculationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousCalculationsView.swift; sourceTree = "<group>"; };
 		2F38937A2908378100E0FF86 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		2F38937C2908390400E0FF86 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		2F38938229083E4500E0FF86 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+Preview.swift"; sourceTree = "<group>"; };
+		2F389387290863A900E0FF86 /* CalculationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationModel.swift; sourceTree = "<group>"; };
 		2F3E50E62907EC4400B1D9AB /* GVC-Apple-Multiplatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GVC-Apple-Multiplatform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasVolumeCalculatorApp.swift; sourceTree = "<group>"; };
 		2F3E50EB2907EC4400B1D9AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,14 +76,9 @@
 		2F38935B29080B8100E0FF86 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2F38935E29080C0700E0FF86 /* MainScreen.swift */,
-				2F3893762908248800E0FF86 /* NPSLinkView.swift */,
-				2F3893742908230D00E0FF86 /* SectionHeaderView.swift */,
-				2F3893722908215D00E0FF86 /* CalculateResultView.swift */,
-				2F38936A29080EE100E0FF86 /* NPSSelectionView.swift */,
-				2F38937029081E2200E0FF86 /* PressureSelectionView.swift */,
-				2F38935C29080B8F00E0FF86 /* DecimalTextFieldView.swift */,
-				2F3893782908273700E0FF86 /* PreviousCalculationsView.swift */,
+				2F38938229083E4500E0FF86 /* Tab.swift */,
+				2F38937E29083DC800E0FF86 /* Calculate */,
+				2F38937F29083DCC00E0FF86 /* Previous Calculations */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -118,6 +119,44 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2F38937E29083DC800E0FF86 /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				2F38935E29080C0700E0FF86 /* MainScreen.swift */,
+				2F38938029083DE900E0FF86 /* Components */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
+		2F38937F29083DCC00E0FF86 /* Previous Calculations */ = {
+			isa = PBXGroup;
+			children = (
+				2F3893782908273700E0FF86 /* PreviousCalculationsView.swift */,
+			);
+			path = "Previous Calculations";
+			sourceTree = "<group>";
+		};
+		2F38938029083DE900E0FF86 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2F38936A29080EE100E0FF86 /* NPSSelectionView.swift */,
+				2F3893762908248800E0FF86 /* NPSLinkView.swift */,
+				2F38935C29080B8F00E0FF86 /* DecimalTextFieldView.swift */,
+				2F38937029081E2200E0FF86 /* PressureSelectionView.swift */,
+				2F3893742908230D00E0FF86 /* SectionHeaderView.swift */,
+				2F3893722908215D00E0FF86 /* CalculateResultView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2F3893842908622D00E0FF86 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F389387290863A900E0FF86 /* CalculationModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		2F3E50DD2907EC4400B1D9AB = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +182,7 @@
 				2F3E50EB2907EC4400B1D9AB /* ContentView.swift */,
 				2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */,
 				2F3E50EF2907EC4500B1D9AB /* GVC_Apple_Multiplatform.entitlements */,
+				2F3893842908622D00E0FF86 /* Data */,
 				2F38936D290819D400E0FF86 /* Extensions */,
 				2F38936C2908184800E0FF86 /* Localization */,
 				2F38935B29080B8100E0FF86 /* UI */,
@@ -154,6 +194,7 @@
 		2F3E50F02907EC4500B1D9AB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */,
 				2F3E50F12907EC4500B1D9AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -245,13 +286,16 @@
 				2F38937D2908390400E0FF86 /* Double+Extensions.swift in Sources */,
 				2F3893732908215D00E0FF86 /* CalculateResultView.swift in Sources */,
 				2F38935F29080C0700E0FF86 /* MainScreen.swift in Sources */,
+				2F389388290863A900E0FF86 /* CalculationModel.swift in Sources */,
 				2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */,
+				2F3893862908624B00E0FF86 /* CalculationModel+Preview.swift in Sources */,
 				2F3893772908248800E0FF86 /* NPSLinkView.swift in Sources */,
 				2F38936F290819ED00E0FF86 /* FormatStyle+Extensions.swift in Sources */,
 				2F38936829080CA000E0FF86 /* LocalizedStrings.swift in Sources */,
 				2F3893752908230D00E0FF86 /* SectionHeaderView.swift in Sources */,
 				2F38937B2908378100E0FF86 /* NumberFormatter+Extensions.swift in Sources */,
 				2F38936B29080EE100E0FF86 /* NPSSelectionView.swift in Sources */,
+				2F38938329083E4500E0FF86 /* Tab.swift in Sources */,
 				2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */,
 				2F3893792908273700E0FF86 /* PreviousCalculationsView.swift in Sources */,
 			);

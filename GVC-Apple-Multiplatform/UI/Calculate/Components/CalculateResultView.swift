@@ -12,10 +12,10 @@ struct CalculateResultView: View {
   
   var body: some View {
     Section {
-      Text(value.formatted())
+      Text(value.toCurrentLocale)
         .bold()
     } header: {
-      HStack {
+      HStack(alignment: .bottom, spacing: 4) {
         Text(LocalizedStrings.Form.resultLabel)
         Text("(m") +
         Text("3")
