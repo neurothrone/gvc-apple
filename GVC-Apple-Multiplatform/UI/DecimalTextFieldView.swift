@@ -24,7 +24,7 @@ struct DecimalTextFieldView_Previews: PreviewProvider {
   static var previews: some View {
     DecimalTextFieldView(
       value: .constant(.zero),
-      placeholder: "Type in a length"
+      placeholder: LocalizedStrings.Form.lengthFieldPlaceholder
     )
     .previewLayout(.sizeThatFits)
   }
