@@ -1,0 +1,40 @@
+/*
+ Localizable.strings
+ GVC-Apple-Multiplatform
+ 
+ Created by Zaid Neurothrone on 2022-10-25.
+ 
+ */
+
+/* Press the button to calculate the gas volume */
+"Calculate" = "Beräkna";
+
+/* The resulting gas volume from the calculation of the inputs provided */
+"Gas volume" = "Gasvolym";
+
+/* The title of the app */
+"Gas Volume Calculator" = "Gasvolym Beräkning";
+
+/* A length value in meters */
+"Length" = "Längd";
+
+/* An established standard used for measuring the radius of a pipe's inner size */
+"Nominal Pipe Size" = "Nominell rörstorlek";
+
+/* A pressure value in millibars */
+"Pressure" = "Övertryck";
+
+/* Select a dimension: Nominal Pipe Size from the Picker */
+"Select a dimension" = "Välj en dimension";
+
+/* Select a pressure in millibars from the Picker */
+"Select a pressure" = "Välj ett övertryck";
+
+/* Type into a text field a length in meters for a pipe */
+"Type in a length" = "Ange en längd";
+
+/* Type into a text field a pressure in millibars */
+"Type in a pressure" = "Ange ett övertryck";
+
+/* Press the button to dismiss the keyboard */
+"Dismiss" = "Avfärda";
