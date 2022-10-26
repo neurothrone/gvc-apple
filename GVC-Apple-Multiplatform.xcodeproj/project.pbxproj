@@ -96,6 +96,7 @@
 		2F38935B29080B8100E0FF86 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2F3E50EB2907EC4400B1D9AB /* ContentView.swift */,
 				2F38938229083E4500E0FF86 /* Tab.swift */,
 				2F38939D29092BB500E0FF86 /* AboutSheet.swift */,
 				2F38937E29083DC800E0FF86 /* Calculate */,
@@ -216,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */,
-				2F3E50EB2907EC4400B1D9AB /* ContentView.swift */,
 				2FCCAC2029092F0800E83931 /* Constants.swift */,
 				2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */,
 				2F3E50EF2907EC4500B1D9AB /* GVC_Apple_Multiplatform.entitlements */,
