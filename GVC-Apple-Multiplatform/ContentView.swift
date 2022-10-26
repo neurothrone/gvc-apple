@@ -23,18 +23,20 @@ struct ContentView: View {
   @AppStorage("selectedTab")
   private var selectedTab: Tab = .calculate
   
+  @State private var isAboutSheetPresented = false
+  
   var body: some View {
     NavigationStack {
       content
         .navigationTitle(LocalizedStrings.App.title)
         .navigationBarTitleDisplayMode(.inline)
-
-
+        .sheet(isPresented: $isAboutSheetPresented) {
+          AboutSheet()
+            .presentationDetents([.medium])
+        }
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-              
-            } label: {
+            Button(action: { isAboutSheetPresented.toggle() }) {
               Image(systemName: "info.circle")
             }
           }

@@ -75,7 +75,7 @@ struct CalculateScreen: View {
     } header: {
       SectionHeaderView(text: LocalizedStrings.Form.npsPickerLabel)
     } footer: {
-      NPSLinkView()
+      CustomLinkView(urlString: Constants.Link.nps, text: LocalizedStrings.Form.npsFooterText)
     }
   }
   
