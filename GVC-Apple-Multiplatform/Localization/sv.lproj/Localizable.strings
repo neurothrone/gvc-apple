@@ -41,3 +41,19 @@
 
 /* Press the button to dismiss the keyboard */
 "Dismiss" = "Avfärda";
+
+/* The Menu button label text for the About sheet */
+"About" = "Om";
+
+/* The text of the delete data alert title */
+"Delete all data" = "Radera all data";
+
+/* The text of the delete data alert message */
+"This will delete all of your data. Are you sure?" = "Detta raderar all din data. Är du säker?";
+
+/* The text of the delete data alert cancel button */
+"Cancel" = "Avbryt";
+
+/* The text of the delete data alert delete button */
+"Delete" = "Radera";
+  

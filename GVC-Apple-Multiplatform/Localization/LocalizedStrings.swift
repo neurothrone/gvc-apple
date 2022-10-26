@@ -12,6 +12,26 @@ enum LocalizedStrings {
     static let title = NSLocalizedString(
       "Gas Volume Calculator",
       comment: "The title of the app")
+    
+    static let aboutLabelText = NSLocalizedString(
+      "About",
+      comment: "The Menu button label text for the About sheet")
+    
+    static let deleteDataAlertTitle = NSLocalizedString(
+      "Delete all data",
+      comment: "The text of the delete data alert title")
+    
+    static let deleteDataAlertMessage = NSLocalizedString(
+      "This will delete all of your data. Are you sure?",
+      comment: "The text of the delete data alert message")
+    
+    static let deleteDataAlertCancelButton = NSLocalizedString(
+      "Cancel",
+      comment: "The text of the delete data alert cancel button")
+    
+    static let deleteDataAlertDeleteButton = NSLocalizedString(
+      "Delete",
+      comment: "The text of the delete data alert delete button")
   }
   
   struct Form {

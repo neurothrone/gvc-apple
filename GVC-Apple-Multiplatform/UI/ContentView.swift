@@ -34,17 +34,17 @@ struct ContentView: View {
         .navigationTitle(LocalizedStrings.App.title)
         .navigationBarTitleDisplayMode(.inline)
         .alert(
-          "Delete all data",
+          LocalizedStrings.App.deleteDataAlertTitle,
           isPresented: $isDeleteDataAlertPresented
         ) {
           Button(role: .cancel, action: {}) {
-            Text("Cancel")
+            Text(LocalizedStrings.App.deleteDataAlertCancelButton)
           }
           Button(role: .destructive, action: deleteAllData) {
-            Text("Delete")
+            Text(LocalizedStrings.App.deleteDataAlertDeleteButton)
           }
         } message: {
-          Text("This will delete all of your data. Are you sure?")
+          Text(LocalizedStrings.App.deleteDataAlertMessage)
         }
         .sheet(isPresented: $isAboutSheetPresented) {
           AboutSheet()
@@ -54,11 +54,11 @@ struct ContentView: View {
           ToolbarItem(placement: .navigationBarTrailing) {
             Menu {
               Button(action: presentAboutSheet) {
-                Label("About", systemImage: "info.circle")
+                Label(LocalizedStrings.App.aboutLabelText, systemImage: "info.circle")
               }
               
               Button(role: .destructive, action: presentDeleteDataAlert) {
-                Label("Delete all data", systemImage: "trash")
+                Label(LocalizedStrings.App.deleteDataAlertTitle, systemImage: "trash")
               }
             } label: {
               Image(systemName: "line.3.horizontal.circle")
