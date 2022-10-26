@@ -27,7 +27,6 @@ struct CalculateScreen: View {
   @AppStorage("pressure")
   private var pressure: Double = .zero
   
-  @State private var isCustomPressure = false
   @State private var result: Double = .zero
   
   private var isInputValid: Bool {
@@ -42,9 +41,6 @@ struct CalculateScreen: View {
   
   var body: some View {
     content
-      .onAppear {
-        isCustomPressure = selectedPressure == .custom
-      }
       .toolbar {
         ToolbarItemGroup(placement: .keyboard) {
           Spacer()
@@ -57,72 +53,19 @@ struct CalculateScreen: View {
   
   private var content: some View {
     Form {
-      npsSection
-      lengthSection
-      pressureSection
-      calculateButton
+      NPSSectionView(selection: $selectedNPS)
+      LengthSectionView(value: $length)
+        .focused($focusedField, equals: .length)
+      PressureSectionView(value: $pressure, selection: $selectedPressure)
+        .focused($focusedField, equals: .pressure)
+      
+      Button(action: calculate) {
+        Text(LocalizedStrings.Form.calculateButtonText)
+      }
+      .disabled(!isInputValid)
+      
       CalculateResultSectionView(value: $result)
     }
-  }
-  
-  private var npsSection: some View {
-    Section {
-      NavigationLink {
-        NPSSelectionView(selection: $selectedNPS)
-      } label: {
-        Text(selectedNPS.toString)
-      }
-    } header: {
-      SectionHeaderView(text: LocalizedStrings.Form.npsPickerLabel)
-    } footer: {
-      CustomLinkView(urlString: Constants.Link.nps, text: LocalizedStrings.Form.npsFooterText)
-    }
-  }
-  
-  private var lengthSection: some View {
-    Section {
-      DecimalTextFieldView(
-        value: $length,
-        placeholder: LocalizedStrings.Form.lengthFieldPlaceholder
-      )
-      .focused($focusedField, equals: .length)
-    } header: {
-      SectionHeaderView(text: LocalizedStrings.Form.lengthFieldLabel)
-    }
-  }
-  
-  private var pressureSection: some View {
-    Section {
-      Picker(
-        LocalizedStrings.Form.pressurePickerHint,
-        selection: $selectedPressure
-      ) {
-        ForEach(PressureSelection.allCases) {
-          Text($0.toString)
-        }
-      }
-      .pickerStyle(.segmented)
-      .onChange(of: selectedPressure) { _ in
-        isCustomPressure = selectedPressure == .custom
-      }
-      
-      if isCustomPressure {
-        DecimalTextFieldView(
-          value: $pressure,
-          placeholder: LocalizedStrings.Form.pressureFieldPlaceholder
-        )
-        .focused($focusedField, equals: .pressure)
-      }
-    } header: {
-      SectionHeaderView(text: LocalizedStrings.Form.pressureLabel)
-    }
-  }
-  
-  private var calculateButton: some View {
-    Button(action: calculate) {
-      Text(LocalizedStrings.Form.calculateButtonText)
-    }
-    .disabled(!isInputValid)
   }
 }
 
@@ -130,7 +73,7 @@ extension CalculateScreen {
   private func calculate() {
     let pressureValue: Double
     
-    if isCustomPressure {
+    if selectedPressure == .custom {
       pressureValue = pressure
     } else {
       pressureValue = Double(selectedPressure.rawValue) ?? .zero
@@ -156,7 +99,9 @@ extension CalculateScreen {
 
 struct CalculateScreen_Previews: PreviewProvider {
   static var previews: some View {
-    CalculateScreen()
-      .environment(\.managedObjectContext, CoreDataProvider.preview.viewContext)
+    NavigationStack {
+      CalculateScreen()
+        .environment(\.managedObjectContext, CoreDataProvider.preview.viewContext)
+    }
   }
 }
