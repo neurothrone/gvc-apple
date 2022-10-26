@@ -24,7 +24,7 @@ final class CoreDataProvider {
   
   // MARK: - Initialization
   
-  let container: NSPersistentContainer
+  var container: NSPersistentContainer
   
   private init(inMemory: Bool = false) {
     container = NSPersistentContainer(name: "Entities")
@@ -33,6 +33,14 @@ final class CoreDataProvider {
       container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
     }
     
+    setUpContainer(container: container)
+  }
+  
+  var viewContext: NSManagedObjectContext {
+    container.viewContext
+  }
+  
+  private func setUpContainer(container: NSPersistentContainer) {
     container.loadPersistentStores { _, error in
 #if DEBUG
       if let error = error as NSError? {
@@ -46,9 +54,5 @@ final class CoreDataProvider {
     container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
     container.viewContext.undoManager = nil
     container.viewContext.shouldDeleteInaccessibleFaults = true
-  }
-  
-  var viewContext: NSManagedObjectContext {
-    container.viewContext
   }
 }

@@ -40,4 +40,15 @@ extension Calculation {
     request.sortDescriptors = [NSSortDescriptor(keyPath: \Calculation.calculatedAt, ascending: false)]
     return request
   }
+  
+  static func deleteAll(using context: NSManagedObjectContext) {
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Calculation.self))
+    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+    batchDeleteRequest.resultType = .resultTypeObjectIDs
+    
+    guard let result = try? context.execute(batchDeleteRequest) as? NSBatchDeleteResult else { return }
+    
+    let changes: [AnyHashable: Any] = [NSDeletedObjectsKey: result.result as! [NSManagedObjectID]]
+    NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [context])
+  }
 }

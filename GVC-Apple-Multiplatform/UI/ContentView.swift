@@ -20,24 +20,48 @@ private extension Tab {
 }
 
 struct ContentView: View {
+  @Environment(\.managedObjectContext) private var viewContext
+  
   @AppStorage("selectedTab")
   private var selectedTab: Tab = .calculate
   
   @State private var isAboutSheetPresented = false
+  @State private var isDeleteDataAlertPresented = false
   
   var body: some View {
     NavigationStack {
       content
         .navigationTitle(LocalizedStrings.App.title)
         .navigationBarTitleDisplayMode(.inline)
+        .alert(
+          "Delete all data",
+          isPresented: $isDeleteDataAlertPresented
+        ) {
+          Button(role: .cancel, action: {}) {
+            Text("Cancel")
+          }
+          Button(role: .destructive, action: deleteAllData) {
+            Text("Delete")
+          }
+        } message: {
+          Text("This will delete all of your data. Are you sure?")
+        }
         .sheet(isPresented: $isAboutSheetPresented) {
           AboutSheet()
             .presentationDetents([.medium])
         }
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
-            Button(action: { isAboutSheetPresented.toggle() }) {
-              Image(systemName: "info.circle")
+            Menu {
+              Button(action: presentAboutSheet) {
+                Label("About", systemImage: "info.circle")
+              }
+              
+              Button(role: .destructive, action: presentDeleteDataAlert) {
+                Label("Delete all data", systemImage: "trash")
+              }
+            } label: {
+              Image(systemName: "line.3.horizontal.circle")
             }
           }
         }
@@ -61,8 +85,23 @@ struct ContentView: View {
   }
 }
 
+extension ContentView {
+  private func presentAboutSheet() {
+    isAboutSheetPresented.toggle()
+  }
+  
+  private func presentDeleteDataAlert() {
+    isDeleteDataAlertPresented.toggle()
+  }
+  
+  private func deleteAllData() {
+    Calculation.deleteAll(using: viewContext)
+  }
+}
+
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
+      .environment(\.managedObjectContext, CoreDataProvider.preview.viewContext)
   }
 }
