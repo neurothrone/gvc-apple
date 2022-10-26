@@ -21,11 +21,11 @@
 		2F38937B2908378100E0FF86 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38937A2908378100E0FF86 /* NumberFormatter+Extensions.swift */; };
 		2F38937D2908390400E0FF86 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38937C2908390400E0FF86 /* Double+Extensions.swift */; };
 		2F38938329083E4500E0FF86 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938229083E4500E0FF86 /* Tab.swift */; };
-		2F3893862908624B00E0FF86 /* CalculationModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */; };
+		2F3893862908624B00E0FF86 /* Calculation+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3893852908624B00E0FF86 /* Calculation+Preview.swift */; };
 		2F38938B290866E500E0FF86 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938A290866E500E0FF86 /* CoreDataProvider.swift */; };
 		2F38938E2908674C00E0FF86 /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938C2908674C00E0FF86 /* Entities.xcdatamodeld */; };
-		2F3893912908697C00E0FF86 /* CalculationModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938F2908697C00E0FF86 /* CalculationModel+CoreData.swift */; };
-		2F389394290869F700E0FF86 /* CalculationModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F389393290869F700E0FF86 /* CalculationModel+Extensions.swift */; };
+		2F3893912908697C00E0FF86 /* Calculation+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38938F2908697C00E0FF86 /* Calculation+CoreData.swift */; };
+		2F389394290869F700E0FF86 /* Calculation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F389393290869F700E0FF86 /* Calculation+Extensions.swift */; };
 		2F38939629086B3000E0FF86 /* CoreDataProvider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */; };
 		2F38939A29087FAE00E0FF86 /* CalculationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939929087FAE00E0FF86 /* CalculationRowView.swift */; };
 		2F38939C2908835B00E0FF86 /* HorizontalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939B2908835B00E0FF86 /* HorizontalRowView.swift */; };
@@ -57,11 +57,11 @@
 		2F38937A2908378100E0FF86 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		2F38937C2908390400E0FF86 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		2F38938229083E4500E0FF86 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+Preview.swift"; sourceTree = "<group>"; };
+		2F3893852908624B00E0FF86 /* Calculation+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calculation+Preview.swift"; sourceTree = "<group>"; };
 		2F38938A290866E500E0FF86 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		2F38938D2908674C00E0FF86 /* Entities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entities.xcdatamodel; sourceTree = "<group>"; };
-		2F38938F2908697C00E0FF86 /* CalculationModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+CoreData.swift"; sourceTree = "<group>"; };
-		2F389393290869F700E0FF86 /* CalculationModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationModel+Extensions.swift"; sourceTree = "<group>"; };
+		2F38938F2908697C00E0FF86 /* Calculation+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calculation+CoreData.swift"; sourceTree = "<group>"; };
+		2F389393290869F700E0FF86 /* Calculation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calculation+Extensions.swift"; sourceTree = "<group>"; };
 		2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataProvider+Extensions.swift"; sourceTree = "<group>"; };
 		2F38939929087FAE00E0FF86 /* CalculationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationRowView.swift; sourceTree = "<group>"; };
 		2F38939B2908835B00E0FF86 /* HorizontalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRowView.swift; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 			children = (
 				2F38938A290866E500E0FF86 /* CoreDataProvider.swift */,
 				2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */,
-				2F38938F2908697C00E0FF86 /* CalculationModel+CoreData.swift */,
-				2F389393290869F700E0FF86 /* CalculationModel+Extensions.swift */,
+				2F38938F2908697C00E0FF86 /* Calculation+CoreData.swift */,
+				2F389393290869F700E0FF86 /* Calculation+Extensions.swift */,
 				2F38938C2908674C00E0FF86 /* Entities.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -232,7 +232,7 @@
 		2F3E50F02907EC4500B1D9AB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2F3893852908624B00E0FF86 /* CalculationModel+Preview.swift */,
+				2F3893852908624B00E0FF86 /* Calculation+Preview.swift */,
 				2F3E50F12907EC4500B1D9AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -328,9 +328,9 @@
 				2F38935F29080C0700E0FF86 /* CalculateScreen.swift in Sources */,
 				2F38938B290866E500E0FF86 /* CoreDataProvider.swift in Sources */,
 				2F38939E29092BB500E0FF86 /* AboutSheet.swift in Sources */,
-				2F3893912908697C00E0FF86 /* CalculationModel+CoreData.swift in Sources */,
+				2F3893912908697C00E0FF86 /* Calculation+CoreData.swift in Sources */,
 				2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */,
-				2F3893862908624B00E0FF86 /* CalculationModel+Preview.swift in Sources */,
+				2F3893862908624B00E0FF86 /* Calculation+Preview.swift in Sources */,
 				2F38936F290819ED00E0FF86 /* FormatStyle+Extensions.swift in Sources */,
 				2F38936829080CA000E0FF86 /* LocalizedStrings.swift in Sources */,
 				2FCCAC25290944ED00E83931 /* NPSSectionView.swift in Sources */,
@@ -341,7 +341,7 @@
 				2F38937B2908378100E0FF86 /* NumberFormatter+Extensions.swift in Sources */,
 				2F38936B29080EE100E0FF86 /* NPSSelectionScreen.swift in Sources */,
 				2F38938329083E4500E0FF86 /* Tab.swift in Sources */,
-				2F389394290869F700E0FF86 /* CalculationModel+Extensions.swift in Sources */,
+				2F389394290869F700E0FF86 /* Calculation+Extensions.swift in Sources */,
 				2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */,
 				2F3893792908273700E0FF86 /* PreviousCalculationsScreen.swift in Sources */,
 				2F38938E2908674C00E0FF86 /* Entities.xcdatamodeld in Sources */,

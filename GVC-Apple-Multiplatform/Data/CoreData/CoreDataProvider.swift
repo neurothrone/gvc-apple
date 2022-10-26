@@ -17,7 +17,7 @@ final class CoreDataProvider {
     let provider = CoreDataProvider(inMemory: true)
     let context = provider.container.viewContext
     
-    CalculationModel.Preview.generateSamples(using: context)
+    Calculation.Preview.generateSamples(using: context)
     
     return provider
   }()

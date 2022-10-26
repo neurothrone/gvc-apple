@@ -1,5 +1,5 @@
 //
-//  CalculationModel+Extensions.swift
+//  Calculation+Extensions.swift
 //  GVC-Apple-Multiplatform
 //
 //  Created by Zaid Neurothrone on 2022-10-25.
@@ -9,22 +9,22 @@ import CoreData
 import GVCCore
 import Foundation
 
-extension CalculationModel {
+extension Calculation {
   static func createWith(
     nps: NPSSelection,
     length: Double,
     pressure: Double,
     result: Double,
     using context: NSManagedObjectContext
-  ) -> CalculationModel {
-    let model = CalculationModel(context: context)
-    model.nps = nps
-    model.length = length
-    model.pressure = pressure
-    model.result = result
+  ) -> Calculation {
+    let calculation = Calculation(context: context)
+    calculation.nps = nps
+    calculation.length = length
+    calculation.pressure = pressure
+    calculation.result = result
     
-    model.save(using: context)
-    return model
+    calculation.save(using: context)
+    return calculation
   }
   
   func save(using context: NSManagedObjectContext) {
@@ -35,9 +35,9 @@ extension CalculationModel {
     CoreDataProvider.delete(object: self, using: context)
   }
   
-  static var all: NSFetchRequest<CalculationModel> {
-    let request = CalculationModel.fetchRequest()
-    request.sortDescriptors = [NSSortDescriptor(keyPath: \CalculationModel.calculatedAt, ascending: false)]
+  static var all: NSFetchRequest<Calculation> {
+    let request = Calculation.fetchRequest()
+    request.sortDescriptors = [NSSortDescriptor(keyPath: \Calculation.calculatedAt, ascending: false)]
     return request
   }
 }

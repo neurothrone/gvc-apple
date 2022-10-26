@@ -12,19 +12,19 @@ struct PreviousCalculationsScreen: View {
   @Environment(\.managedObjectContext) private var viewContext
   
   @FetchRequest(
-    fetchRequest: CalculationModel.all,
+    fetchRequest: Calculation.all,
     animation: .easeInOut
   )
-  private var calculationModels
+  private var calculations
   
   var body: some View {
-    if calculationModels.isEmpty {
+    if calculations.isEmpty {
       Color(UIColor.systemGroupedBackground)
         .ignoresSafeArea()
     } else {
       List {
-        ForEach(calculationModels) { model in
-          CalculationRowView(model: model)
+        ForEach(calculations) { calculation in
+          CalculationRowView(calculation: calculation)
         }
         .onDelete(perform: delete)
       }
@@ -35,7 +35,7 @@ struct PreviousCalculationsScreen: View {
 extension PreviousCalculationsScreen {
   private func delete(atOffsets: IndexSet) {
     guard let index = atOffsets.first else { return }
-    calculationModels[index].delete(using: viewContext)
+    calculations[index].delete(using: viewContext)
   }
 }
 

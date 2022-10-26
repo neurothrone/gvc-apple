@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct CalculationRowView: View {
-  let model: CalculationModel
+  let calculation: Calculation
   
   var body: some View {
     VStack(alignment: .leading) {
-      HorizontalRowView(label: "NPS", text: model.nps.toString)
-      HorizontalRowView(label: "Length", text: model.length.formatted(.localCurrency))
-      HorizontalRowView(label: "Pressure", text: model.pressure.formatted(.localCurrency))
-      HorizontalRowView(label: "Gas Volume", text: model.result.toCurrentLocale, isProminent: true)
-      HorizontalRowView(label: "Calculated at", text: model.calculatedAt.formatted(date: .abbreviated, time: .omitted), labelColor: .secondary, textColor: .secondary)
+      HorizontalRowView(label: "NPS", text: calculation.nps.toString)
+      HorizontalRowView(label: "Length", text: calculation.length.formatted(.localCurrency))
+      HorizontalRowView(label: "Pressure", text: calculation.pressure.formatted(.localCurrency))
+      HorizontalRowView(label: "Gas Volume", text: calculation.result.toCurrentLocale, isProminent: true)
+      HorizontalRowView(label: "Calculated at", text: calculation.calculatedAt.formatted(date: .abbreviated, time: .omitted), labelColor: .secondary, textColor: .secondary)
         .padding(.top, 10)
     }
   }
@@ -25,9 +25,9 @@ struct CalculationRowView: View {
 struct CalculationRowView_Previews: PreviewProvider {
   static var previews: some View {
     let context = CoreDataProvider.preview.viewContext
-    let model = CalculationModel.Preview.generateSample(using: context)
+    let calculation = Calculation.Preview.generateSample(using: context)
     
-    return CalculationRowView(model: model)
+    return CalculationRowView(calculation: calculation)
       .environment(\.managedObjectContext, context)
   }
 }

@@ -1,5 +1,5 @@
 //
-//  CalculationModel+Preview.swift
+//  Calculation+Preview.swift
 //  GVC-Apple-Multiplatform
 //
 //  Created by Zaid Neurothrone on 2022-10-25.
@@ -8,17 +8,17 @@
 import CoreData
 import GVCCore
 
-extension CalculationModel {
+extension Calculation {
   enum Preview {
-    static func generateSample(using context: NSManagedObjectContext) -> CalculationModel {
-      let model = CalculationModel(context: context)
-      model.nps = .threeHundred
-      model.length = 2400
-      model.pressure = 4000
-      model.result = GVCCore.calculateGasVolume(nps: model.nps, length: model.length, pressure: model.pressure)
+    static func generateSample(using context: NSManagedObjectContext) -> Calculation {
+      let calculation = Calculation(context: context)
+      calculation.nps = .threeHundred
+      calculation.length = 2400
+      calculation.pressure = 4000
+      calculation.result = GVCCore.calculateGasVolume(nps: calculation.nps, length: calculation.length, pressure: calculation.pressure)
       
-      model.save(using: context)
-      return model
+      calculation.save(using: context)
+      return calculation
     }
     
     static func generateSamples(using context: NSManagedObjectContext) {
@@ -28,7 +28,7 @@ extension CalculationModel {
         let pressure = Double.random(in: 30...4000, withDecimals: Int.random(in: 0...3))
         let result = GVCCore.calculateGasVolume(nps: nps, length: length, pressure: pressure)
         
-        let _ = CalculationModel.createWith(
+        let _ = Calculation.createWith(
           nps: nps,
           length: length,
           pressure: pressure,

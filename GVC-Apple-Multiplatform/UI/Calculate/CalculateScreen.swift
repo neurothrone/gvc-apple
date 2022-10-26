@@ -85,7 +85,7 @@ extension CalculateScreen {
       pressure: pressureValue
     )
     
-    let _ = CalculationModel.createWith(
+    let _ = Calculation.createWith(
       nps: selectedNPS,
       length: length,
       pressure: pressureValue,

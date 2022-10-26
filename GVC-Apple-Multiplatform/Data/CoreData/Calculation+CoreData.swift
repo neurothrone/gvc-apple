@@ -1,5 +1,5 @@
 //
-//  CalculationModel+CoreDataClass.swift
+//  Calculation+CoreDataClass.swift
 //  GVC-Apple-Multiplatform
 //
 //  Created by Zaid Neurothrone on 2022-10-25.
@@ -10,11 +10,11 @@ import CoreData
 import Foundation
 import GVCCore
 
-@objc(CalculationModel)
-public class CalculationModel: NSManagedObject {
+@objc(Calculation)
+public class Calculation: NSManagedObject {
   
-  @nonobjc public class func fetchRequest() -> NSFetchRequest<CalculationModel> {
-    return NSFetchRequest<CalculationModel>(entityName: String(describing: CalculationModel.self))
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<Calculation> {
+    return NSFetchRequest<Calculation>(entityName: String(describing: Calculation.self))
   }
   
   @NSManaged public var id: String
@@ -37,4 +37,4 @@ public class CalculationModel: NSManagedObject {
   }
 }
 
-extension CalculationModel : Identifiable {}
+extension Calculation : Identifiable {}
