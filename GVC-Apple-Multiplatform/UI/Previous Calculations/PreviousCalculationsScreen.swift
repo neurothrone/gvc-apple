@@ -18,19 +18,16 @@ struct PreviousCalculationsScreen: View {
   private var calculationModels
   
   var body: some View {
-    NavigationStack {
-      content
-        .navigationTitle("Previous Calculations")
-        .navigationBarTitleDisplayMode(.inline)
-    }
-  }
-  
-  private var content: some View {
-    List {
-      ForEach(calculationModels) { model in
-        CalculationRowView(model: model)
+    if calculationModels.isEmpty {
+      Color(UIColor.systemGroupedBackground)
+        .ignoresSafeArea()
+    } else {
+      List {
+        ForEach(calculationModels) { model in
+          CalculationRowView(model: model)
+        }
+        .onDelete(perform: delete)
       }
-      .onDelete(perform: delete)
     }
   }
 }

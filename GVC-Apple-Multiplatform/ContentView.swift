@@ -24,13 +24,37 @@ struct ContentView: View {
   private var selectedTab: Tab = .calculate
   
   var body: some View {
-    TabView(selection: $selectedTab) {
-      ForEach(Tab.allCases) { tab in
-        tab.view
-          .tabItem {
-            Label(tab.rawValue, systemImage: tab.systemImageName)
+    NavigationStack {
+      content
+        .navigationTitle(LocalizedStrings.App.title)
+        .navigationBarTitleDisplayMode(.inline)
+
+
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+              
+            } label: {
+              Image(systemName: "info.circle")
+            }
           }
+        }
+    }
+  }
+  
+  private var content: some View {
+    TabView(selection: $selectedTab) {
+      Group {
+        ForEach(Tab.allCases) { tab in
+          tab.view
+            .tabItem {
+              Label(tab.rawValue, systemImage: tab.systemImageName)
+            }
+        }
       }
+      .toolbar(.visible, for: .tabBar)
+      .toolbarBackground(.thinMaterial, for: .tabBar)
+      .toolbarBackground(Color.accentColor.opacity(0.15), for: .tabBar)
     }
   }
 }

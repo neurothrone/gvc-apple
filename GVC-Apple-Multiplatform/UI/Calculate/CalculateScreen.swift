@@ -41,22 +41,18 @@ struct CalculateScreen: View {
   }
   
   var body: some View {
-    NavigationStack {
-      content
-        .navigationTitle(LocalizedStrings.App.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-          isCustomPressure = selectedPressure == .custom
-        }
-        .toolbar {
-          ToolbarItemGroup(placement: .keyboard) {
-            Spacer()
-            Button(LocalizedStrings.Form.dismissButtonText) {
-              focusedField = nil
-            }
+    content
+      .onAppear {
+        isCustomPressure = selectedPressure == .custom
+      }
+      .toolbar {
+        ToolbarItemGroup(placement: .keyboard) {
+          Spacer()
+          Button(LocalizedStrings.Form.dismissButtonText) {
+            focusedField = nil
           }
         }
-    }
+      }
   }
   
   private var content: some View {
