@@ -8,11 +8,11 @@
 import Foundation
 
 enum Constants {
-  enum AppStorage: String {
-    case selectedNPS
-    case selectedPressure
-    case length
-    case pressure
+  struct AppStorage {
+    static let selectedNPS = "selectedNPS"
+    static let selectedPressure = "selectedPressure"
+    static let length = "length"
+    static let pressure = "pressure"
   }
   
   struct Link {

@@ -27,7 +27,8 @@ struct NPSSelectionScreen: View {
               if selection == npsSelection {
                 Spacer()
                 Image(systemName: "checkmark.seal.fill")
-                  .foregroundColor(.green)
+                  .foregroundColor(.accentColor)
+                  .imageScale(.large)
               }
             }
           }

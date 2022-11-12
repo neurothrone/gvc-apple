@@ -17,14 +17,14 @@ struct CalculateScreen: View {
   @Environment(\.managedObjectContext) private var viewContext
   @FocusState private var focusedField: Field?
   
-  @AppStorage(Constants.AppStorage.selectedNPS.rawValue)
+  @AppStorage(Constants.AppStorage.selectedNPS)
   private var selectedNPS: NPSSelection = .twenty
-  @AppStorage(Constants.AppStorage.selectedPressure.rawValue)
+  @AppStorage(Constants.AppStorage.selectedPressure)
   private var selectedPressure: PressureSelection = .thirty
   
-  @AppStorage(Constants.AppStorage.length.rawValue)
+  @AppStorage(Constants.AppStorage.length)
   private var length: Double = .zero
-  @AppStorage(Constants.AppStorage.pressure.rawValue)
+  @AppStorage(Constants.AppStorage.pressure)
   private var pressure: Double = .zero
   
   @State private var result: Double = .zero
