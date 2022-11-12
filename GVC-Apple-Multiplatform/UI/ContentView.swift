@@ -48,7 +48,7 @@ struct ContentView: View {
         }
         .sheet(isPresented: $isAboutSheetPresented) {
           AboutSheet()
-            .presentationDetents([.medium])
+            .presentationDetents([.fraction(0.25), .medium])
         }
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
@@ -78,8 +78,7 @@ struct ContentView: View {
             }
         }
       }
-      .toolbar(.visible, for: .tabBar)
-      .toolbarBackground(.thinMaterial, for: .tabBar)
+      .toolbarBackground(.visible, for: .tabBar)
       .toolbarBackground(Color.accentColor.opacity(0.15), for: .tabBar)
     }
   }
@@ -103,5 +102,6 @@ struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
       .environment(\.managedObjectContext, CoreDataProvider.preview.viewContext)
+//      .preferredColorScheme(.dark)
   }
 }
