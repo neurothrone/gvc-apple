@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F3893572907F11700E0FF86 /* GVCCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3893562907F11700E0FF86 /* GVCCore */; };
-		2F38935D29080B8F00E0FF86 /* DecimalTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38935C29080B8F00E0FF86 /* DecimalTextFieldView.swift */; };
 		2F38935F29080C0700E0FF86 /* CalculateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38935E29080C0700E0FF86 /* CalculateScreen.swift */; };
 		2F38936729080CA000E0FF86 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F38936129080CA000E0FF86 /* Localizable.strings */; };
 		2F38936829080CA000E0FF86 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38936329080CA000E0FF86 /* LocalizedStrings.swift */; };
@@ -36,6 +35,7 @@
 		2F3E50F22907EC4500B1D9AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50F12907EC4500B1D9AB /* Preview Assets.xcassets */; };
 		2F3E50FA2907ECCB00B1D9AB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50F82907ECCB00B1D9AB /* LICENSE */; };
 		2F3E50FB2907ECCB00B1D9AB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50F92907ECCB00B1D9AB /* README.md */; };
+		2F7B8785291FE543008E889C /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B8784291FE543008E889C /* CustomTextFieldView.swift */; };
 		2FCCAC2129092F0800E83931 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCAC2029092F0800E83931 /* Constants.swift */; };
 		2FCCAC2329092F9100E83931 /* CustomLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCAC2229092F9100E83931 /* CustomLinkView.swift */; };
 		2FCCAC25290944ED00E83931 /* NPSSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCAC24290944ED00E83931 /* NPSSectionView.swift */; };
@@ -44,7 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F38935C29080B8F00E0FF86 /* DecimalTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalTextFieldView.swift; sourceTree = "<group>"; };
 		2F38935E29080C0700E0FF86 /* CalculateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateScreen.swift; sourceTree = "<group>"; };
 		2F38936229080CA000E0FF86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		2F38936329080CA000E0FF86 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		2F3E50F12907EC4500B1D9AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F3E50F82907ECCB00B1D9AB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2F3E50F92907ECCB00B1D9AB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2F7B8784291FE543008E889C /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		2FCCAC2029092F0800E83931 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2FCCAC2229092F9100E83931 /* CustomLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLinkView.swift; sourceTree = "<group>"; };
 		2FCCAC24290944ED00E83931 /* NPSSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSSectionView.swift; sourceTree = "<group>"; };
@@ -168,9 +168,9 @@
 		2F38938029083DE900E0FF86 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2F38935C29080B8F00E0FF86 /* DecimalTextFieldView.swift */,
-				2F3893742908230D00E0FF86 /* SectionHeaderView.swift */,
+				2F7B8784291FE543008E889C /* CustomTextFieldView.swift */,
 				2FCCAC2229092F9100E83931 /* CustomLinkView.swift */,
+				2F3893742908230D00E0FF86 /* SectionHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -321,7 +321,7 @@
 			files = (
 				2FCCAC2129092F0800E83931 /* Constants.swift in Sources */,
 				2F38939A29087FAE00E0FF86 /* CalculationRowView.swift in Sources */,
-				2F38935D29080B8F00E0FF86 /* DecimalTextFieldView.swift in Sources */,
+				2F7B8785291FE543008E889C /* CustomTextFieldView.swift in Sources */,
 				2F38937D2908390400E0FF86 /* Double+Extensions.swift in Sources */,
 				2FCCAC292909462A00E83931 /* PressureSectionView.swift in Sources */,
 				2F3893732908215D00E0FF86 /* CalculateResultSectionView.swift in Sources */,

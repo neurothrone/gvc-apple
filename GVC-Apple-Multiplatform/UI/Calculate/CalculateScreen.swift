@@ -23,16 +23,18 @@ struct CalculateScreen: View {
   private var selectedPressure: PressureSelection = .thirty
   
   @AppStorage(Constants.AppStorage.length)
-  private var length: Double = .zero
+  private var length: String = ""
   @AppStorage(Constants.AppStorage.pressure)
-  private var pressure: Double = .zero
+  private var pressure: String = ""
   
   @State private var result: Double = .zero
   
   private var isInputValid: Bool {
-    if length == .zero { return false }
+    guard Double(length) != nil,
+          Double(pressure) != nil
+    else { return false }
     
-    if selectedPressure == .custom && pressure == .zero {
+    if selectedPressure == .custom && pressure == "" {
       return false
     }
     
@@ -41,6 +43,11 @@ struct CalculateScreen: View {
   
   var body: some View {
     content
+      .onAppear {
+        if selectedPressure != .custom {
+          pressure = selectedPressure.rawValue
+        }
+      }
       .toolbar {
         ToolbarItemGroup(placement: .keyboard) {
           Spacer()
@@ -54,9 +61,11 @@ struct CalculateScreen: View {
   private var content: some View {
     Form {
       NPSSectionView(selection: $selectedNPS)
-      LengthSectionView(value: $length)
+      
+      LengthSectionView(text: $length)
         .focused($focusedField, equals: .length)
-      PressureSectionView(value: $pressure, selection: $selectedPressure)
+      
+      PressureSectionView(text: $pressure, selection: $selectedPressure)
         .focused($focusedField, equals: .pressure)
       
       Button(action: calculate) {
@@ -71,23 +80,28 @@ struct CalculateScreen: View {
 
 extension CalculateScreen {
   private func calculate() {
-    let pressureValue: Double
+    let pressureString: String
     
     if selectedPressure == .custom {
-      pressureValue = pressure
+      pressureString = pressure
     } else {
-      pressureValue = Double(selectedPressure.rawValue) ?? .zero
+      pressureString = selectedPressure.rawValue
     }
+    
+    guard let lengthValue = Double(length),
+          let pressureValue = Double(pressureString)
+    else { return }
+    
     
     result = GVCCore.calculateGasVolume(
       nps: selectedNPS,
-      length: length,
+      length: lengthValue,
       pressure: pressureValue
     )
     
     let _ = Calculation.createWith(
       nps: selectedNPS,
-      length: length,
+      length: lengthValue,
       pressure: pressureValue,
       result: result,
       using: viewContext

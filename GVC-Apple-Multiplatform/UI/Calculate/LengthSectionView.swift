@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct LengthSectionView: View {
-  @Binding var value: Double
+  @Binding var text: String
   
   var body: some View {
     Section {
-      DecimalTextFieldView(
-        value: $value,
-        placeholder: LocalizedStrings.Form.lengthFieldPlaceholder
+      CustomTextFieldView(
+        placeholder: LocalizedStrings.Form.lengthFieldPlaceholder,
+        text: $text
       )
     } header: {
       SectionHeaderView(text: LocalizedStrings.Form.lengthFieldLabel)
@@ -24,6 +24,6 @@ struct LengthSectionView: View {
 
 struct LengthSectionView_Previews: PreviewProvider {
   static var previews: some View {
-    LengthSectionView(value: .constant(.zero))
+    LengthSectionView(text: .constant(""))
   }
 }

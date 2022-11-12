@@ -9,7 +9,7 @@ import GVCCore
 import SwiftUI
 
 struct PressureSectionView: View {
-  @Binding var value: Double
+  @Binding var text: String
   @Binding var selection: PressureSelection
   
   var body: some View {
@@ -23,12 +23,14 @@ struct PressureSectionView: View {
         }
       }
       .pickerStyle(.segmented)
+      
       if selection == .custom {
-        DecimalTextFieldView(
-          value: $value,
-          placeholder: LocalizedStrings.Form.pressureFieldPlaceholder
+        CustomTextFieldView(
+          placeholder: LocalizedStrings.Form.pressureFieldPlaceholder,
+          text: $text
         )
       }
+      
     } header: {
       SectionHeaderView(text: LocalizedStrings.Form.pressureLabel)
     }
@@ -37,6 +39,9 @@ struct PressureSectionView: View {
 
 struct PressureSectionView_Previews: PreviewProvider {
   static var previews: some View {
-    PressureSectionView(value: .constant(.zero), selection: .constant(.fourThousand))
+    PressureSectionView(
+      text: .constant(""),
+      selection: .constant(.fourThousand)
+    )
   }
 }
