@@ -20,10 +20,10 @@ struct AboutSheet: View {
   var body: some View {
     VStack(spacing: 4) {
       HStack(spacing: 0) {
-        Text("Made with ")
+        Text("\(LocalizedStrings.App.madeWith) ")
         Image(systemName: "heart.fill")
           .foregroundColor(.purple)
-        Text(" by Zaid Neurothrone")
+        Text(" \(LocalizedStrings.App.by) Zaid Neurothrone")
         
       }
       
@@ -33,8 +33,10 @@ struct AboutSheet: View {
         Text(" \(currentYear)")
       }
       
-      CustomLinkView(urlString: Constants.Link.svgRepo, text: "App icon by svgrepo.com")
-        .padding(.top)
+      CustomLinkView(
+        urlString: Constants.Link.svgRepo,
+        text: "\(LocalizedStrings.App.appIconBy) svgrepo.com")
+      .padding(.top)
     }
   }
 }

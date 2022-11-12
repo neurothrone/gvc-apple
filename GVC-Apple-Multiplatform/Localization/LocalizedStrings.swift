@@ -32,6 +32,10 @@ enum LocalizedStrings {
     static let deleteDataAlertDeleteButton = NSLocalizedString(
       "Delete",
       comment: "The text of the delete data alert delete button")
+    
+    static let madeWith = NSLocalizedString("Made with", comment: "About sheet author 1")
+    static let by = NSLocalizedString("by", comment: "About sheet author 2")
+    static let appIconBy = NSLocalizedString("App icon by", comment: "About sheet attribution")
   }
   
   struct Form {

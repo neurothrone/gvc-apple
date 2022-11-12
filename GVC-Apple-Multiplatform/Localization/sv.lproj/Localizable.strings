@@ -57,3 +57,11 @@
 /* The text of the delete data alert delete button */
 "Delete" = "Radera";
   
+/* About sheet author 1 */
+"Made with" = "Skapad med";
+
+/* About sheet author 2 */
+"by" = "av";
+
+/* About sheet attribution */
+"App icon by" = "App-ikon av";
