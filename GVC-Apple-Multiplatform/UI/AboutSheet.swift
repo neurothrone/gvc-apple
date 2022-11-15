@@ -33,6 +33,9 @@ struct AboutSheet: View {
         Text(" \(currentYear)")
       }
       
+      Text("Version \(UIApplication.appVersion)")
+        .foregroundColor(.secondary)
+      
       CustomLinkView(
         urlString: Constants.Link.svgRepo,
         text: "\(LocalizedStrings.App.appIconBy) svgrepo.com")

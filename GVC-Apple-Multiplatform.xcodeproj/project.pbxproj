@@ -36,6 +36,7 @@
 		2F3E50FA2907ECCB00B1D9AB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50F82907ECCB00B1D9AB /* LICENSE */; };
 		2F3E50FB2907ECCB00B1D9AB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50F92907ECCB00B1D9AB /* README.md */; };
 		2F7B8785291FE543008E889C /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B8784291FE543008E889C /* CustomTextFieldView.swift */; };
+		2F7B87992923F93A008E889C /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B87982923F93A008E889C /* UIApplication+Extensions.swift */; };
 		2FCCAC2129092F0800E83931 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCAC2029092F0800E83931 /* Constants.swift */; };
 		2FCCAC2329092F9100E83931 /* CustomLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCAC2229092F9100E83931 /* CustomLinkView.swift */; };
 		2FCCAC25290944ED00E83931 /* NPSSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCAC24290944ED00E83931 /* NPSSectionView.swift */; };
@@ -74,6 +75,7 @@
 		2F3E50F82907ECCB00B1D9AB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2F3E50F92907ECCB00B1D9AB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2F7B8784291FE543008E889C /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		2F7B87982923F93A008E889C /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		2FCCAC2029092F0800E83931 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2FCCAC2229092F9100E83931 /* CustomLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLinkView.swift; sourceTree = "<group>"; };
 		2FCCAC24290944ED00E83931 /* NPSSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSSectionView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				2F38937C2908390400E0FF86 /* Double+Extensions.swift */,
 				2F38936E290819ED00E0FF86 /* FormatStyle+Extensions.swift */,
 				2F38937A2908378100E0FF86 /* NumberFormatter+Extensions.swift */,
+				2F7B87982923F93A008E889C /* UIApplication+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				2F3893862908624B00E0FF86 /* Calculation+Preview.swift in Sources */,
 				2F38936F290819ED00E0FF86 /* FormatStyle+Extensions.swift in Sources */,
 				2F38936829080CA000E0FF86 /* LocalizedStrings.swift in Sources */,
+				2F7B87992923F93A008E889C /* UIApplication+Extensions.swift in Sources */,
 				2FCCAC25290944ED00E83931 /* NPSSectionView.swift in Sources */,
 				2F38939629086B3000E0FF86 /* CoreDataProvider+Extensions.swift in Sources */,
 				2F38939C2908835B00E0FF86 /* HorizontalRowView.swift in Sources */,
