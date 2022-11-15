@@ -61,7 +61,7 @@ struct ContentView: View {
                 Label(LocalizedStrings.App.deleteDataAlertTitle, systemImage: "trash")
               }
             } label: {
-              Image(systemName: "line.3.horizontal.circle")
+              Image(systemName: "ellipsis.circle")
             }
           }
         }
