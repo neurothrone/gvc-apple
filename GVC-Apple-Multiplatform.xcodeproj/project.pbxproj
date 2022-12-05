@@ -192,6 +192,7 @@
 				2F38939529086B3000E0FF86 /* CoreDataProvider+Extensions.swift */,
 				2F38938F2908697C00E0FF86 /* Calculation+CoreData.swift */,
 				2F389393290869F700E0FF86 /* Calculation+Extensions.swift */,
+				2F3893852908624B00E0FF86 /* Calculation+Preview.swift */,
 				2F38938C2908674C00E0FF86 /* Entities.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -235,7 +236,6 @@
 		2F3E50F02907EC4500B1D9AB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2F3893852908624B00E0FF86 /* Calculation+Preview.swift */,
 				2F3E50F12907EC4500B1D9AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
