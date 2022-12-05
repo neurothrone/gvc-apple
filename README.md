@@ -2,4 +2,4 @@
 
 ## About
 
-A iOS app for calculating the gas volume in pipes that persists earlier calculations.
+An iOS app for calculating the gas volume in pipes and that persists your earlier calculations locally on the device for quick access.

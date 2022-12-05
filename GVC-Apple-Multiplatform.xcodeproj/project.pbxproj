@@ -29,7 +29,7 @@
 		2F38939A29087FAE00E0FF86 /* CalculationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939929087FAE00E0FF86 /* CalculationRowView.swift */; };
 		2F38939C2908835B00E0FF86 /* HorizontalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939B2908835B00E0FF86 /* HorizontalRowView.swift */; };
 		2F38939E29092BB500E0FF86 /* AboutSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38939D29092BB500E0FF86 /* AboutSheet.swift */; };
-		2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */; };
+		2F3E50EA2907EC4400B1D9AB /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50E92907EC4400B1D9AB /* AppMain.swift */; };
 		2F3E50EC2907EC4400B1D9AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E50EB2907EC4400B1D9AB /* ContentView.swift */; };
 		2F3E50EE2907EC4500B1D9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */; };
 		2F3E50F22907EC4500B1D9AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3E50F12907EC4500B1D9AB /* Preview Assets.xcassets */; };
@@ -67,7 +67,7 @@
 		2F38939B2908835B00E0FF86 /* HorizontalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRowView.swift; sourceTree = "<group>"; };
 		2F38939D29092BB500E0FF86 /* AboutSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSheet.swift; sourceTree = "<group>"; };
 		2F3E50E62907EC4400B1D9AB /* GVC-Apple-Multiplatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GVC-Apple-Multiplatform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasVolumeCalculatorApp.swift; sourceTree = "<group>"; };
+		2F3E50E92907EC4400B1D9AB /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		2F3E50EB2907EC4400B1D9AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F3E50EF2907EC4500B1D9AB /* GVC_Apple_Multiplatform.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GVC_Apple_Multiplatform.entitlements; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		2F3E50E82907EC4400B1D9AB /* GVC-Apple-Multiplatform */ = {
 			isa = PBXGroup;
 			children = (
-				2F3E50E92907EC4400B1D9AB /* GasVolumeCalculatorApp.swift */,
+				2F3E50E92907EC4400B1D9AB /* AppMain.swift */,
 				2F3E50EB2907EC4400B1D9AB /* ContentView.swift */,
 				2FCCAC2029092F0800E83931 /* Constants.swift */,
 				2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */,
@@ -272,7 +272,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					2F3E50E52907EC4400B1D9AB = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -346,7 +346,7 @@
 				2F38936B29080EE100E0FF86 /* NPSSelectionScreen.swift in Sources */,
 				2F38938329083E4500E0FF86 /* Tab.swift in Sources */,
 				2F389394290869F700E0FF86 /* Calculation+Extensions.swift in Sources */,
-				2F3E50EA2907EC4400B1D9AB /* GasVolumeCalculatorApp.swift in Sources */,
+				2F3E50EA2907EC4400B1D9AB /* AppMain.swift in Sources */,
 				2F3893792908273700E0FF86 /* PreviousCalculationsScreen.swift in Sources */,
 				2F38938E2908674C00E0FF86 /* Entities.xcdatamodeld in Sources */,
 				2FCCAC27290945C400E83931 /* LengthSectionView.swift in Sources */,
@@ -379,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -408,6 +409,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -437,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -466,6 +469,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -490,13 +494,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "GVC-Apple-Multiplatform/GVC_Apple_Multiplatform.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GVC-Apple-Multiplatform/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GasVo;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -512,7 +520,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.neurothrone.GVC-Apple-Multiplatform";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.neurothrone.gasVolumeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -528,13 +536,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "GVC-Apple-Multiplatform/GVC_Apple_Multiplatform.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GVC-Apple-Multiplatform/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GasVo;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -550,7 +562,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.neurothrone.GVC-Apple-Multiplatform";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.neurothrone.gasVolumeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
