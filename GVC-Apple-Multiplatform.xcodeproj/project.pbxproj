@@ -81,6 +81,7 @@
 		2FCCAC24290944ED00E83931 /* NPSSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPSSectionView.swift; sourceTree = "<group>"; };
 		2FCCAC26290945C400E83931 /* LengthSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthSectionView.swift; sourceTree = "<group>"; };
 		2FCCAC282909462A00E83931 /* PressureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureSectionView.swift; sourceTree = "<group>"; };
+		2FDBB29E293DF95A00A8A2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +220,7 @@
 		2F3E50E82907EC4400B1D9AB /* GVC-Apple-Multiplatform */ = {
 			isa = PBXGroup;
 			children = (
+				2FDBB29E293DF95A00A8A2BF /* Info.plist */,
 				2F3E50E92907EC4400B1D9AB /* AppMain.swift */,
 				2F3E50EB2907EC4400B1D9AB /* ContentView.swift */,
 				2FCCAC2029092F0800E83931 /* Constants.swift */,
@@ -497,13 +499,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GVC-Apple-Multiplatform/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GVC-Apple-Multiplatform/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GasVo;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -539,13 +542,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GVC-Apple-Multiplatform/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GVC-Apple-Multiplatform/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GasVo;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
