@@ -65,3 +65,14 @@
 
 /* About sheet attribution */
 "App icon by" = "App-ikon av";
+
+/* Row NPS label */
+"NPS" = "NPS";
+/* Row Length label */
+"Length" = "Längd";
+/* Row Pressure label */
+"Pressure" = "Övertryck";
+/* Row Gas Volume label */
+"Gas Volume" = "Gasvolym";
+/* Row Calculated at label */
+"Calculated at" = "Beräknat på";

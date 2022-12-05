@@ -79,5 +79,11 @@ enum LocalizedStrings {
     static let dismissButtonText = NSLocalizedString(
       "Dismiss",
       comment: "Press the button to dismiss the keyboard")
+    
+    static let nps = NSLocalizedString("NPS", comment: "Row NPS label")
+    static let length = NSLocalizedString("Length", comment: "Row Length label")
+    static let pressure = NSLocalizedString("Pressure", comment: "Row Pressure label")
+    static let gasVolume = NSLocalizedString("Gas Volume", comment: "Row Gas Volume label")
+    static let calculatedAt = NSLocalizedString("Calculated at", comment: "Row Calculated at label")
   }
 }

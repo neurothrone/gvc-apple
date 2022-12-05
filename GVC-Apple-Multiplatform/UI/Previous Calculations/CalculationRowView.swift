@@ -12,12 +12,31 @@ struct CalculationRowView: View {
   
   var body: some View {
     VStack(alignment: .leading) {
-      HorizontalRowView(label: "NPS", text: calculation.nps.toString)
-      HorizontalRowView(label: "Length", text: calculation.length.formatted(.localCurrency))
-      HorizontalRowView(label: "Pressure", text: calculation.pressure.formatted(.localCurrency))
-      HorizontalRowView(label: "Gas Volume", text: calculation.result.toCurrentLocale, isProminent: true)
-      HorizontalRowView(label: "Calculated at", text: calculation.calculatedAt.formatted(date: .abbreviated, time: .omitted), labelColor: .secondary, textColor: .secondary)
-        .padding(.top, 10)
+      HorizontalRowView(
+        label: LocalizedStrings.Form.nps,
+        text: calculation.nps.toString
+      )
+      HorizontalRowView(
+        label: LocalizedStrings.Form.length,
+        text: calculation.length.formatted(.localCurrency)
+      )
+      HorizontalRowView(
+        label: LocalizedStrings.Form.pressure,
+        text: calculation.pressure.formatted(.localCurrency)
+      )
+      HorizontalRowView(
+        label: LocalizedStrings.Form.gasVolume,
+        text: calculation.result.toCurrentLocale, isProminent: true
+      )
+      HorizontalRowView(
+        label: LocalizedStrings.Form.calculatedAt,
+        text: calculation.calculatedAt.formatted(
+          date: .abbreviated,
+          time: .omitted),
+        labelColor: .secondary,
+        textColor: .secondary
+      )
+      .padding(.top, 10)
     }
   }
 }
