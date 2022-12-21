@@ -226,9 +226,9 @@
 				2FCCAC2029092F0800E83931 /* Constants.swift */,
 				2F3E50ED2907EC4500B1D9AB /* Assets.xcassets */,
 				2F3E50EF2907EC4500B1D9AB /* GVC_Apple_Multiplatform.entitlements */,
-				2F3893842908622D00E0FF86 /* Data */,
-				2F38936D290819D400E0FF86 /* Extensions */,
 				2F38936C2908184800E0FF86 /* Localization */,
+				2F38936D290819D400E0FF86 /* Extensions */,
+				2F3893842908622D00E0FF86 /* Data */,
 				2F38935B29080B8100E0FF86 /* UI */,
 				2F3E50F02907EC4500B1D9AB /* Preview Content */,
 			);
@@ -499,7 +499,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GVC-Apple-Multiplatform/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BP826FJGX;
@@ -508,6 +508,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GVC-Apple-Multiplatform/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GasVo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -526,7 +527,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.neurothrone.gasVolumeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -542,7 +545,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"GVC-Apple-Multiplatform/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BP826FJGX;
@@ -551,6 +554,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "GVC-Apple-Multiplatform/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GasVo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -569,7 +573,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.neurothrone.gasVolumeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
