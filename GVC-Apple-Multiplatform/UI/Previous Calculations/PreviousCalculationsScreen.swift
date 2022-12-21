@@ -9,7 +9,7 @@ import GVCCore
 import SwiftUI
 
 struct PreviousCalculationsScreen: View {
-  @Environment(\.managedObjectContext) private var viewContext
+  @Environment(\.managedObjectContext) var viewContext
   
   @FetchRequest(
     fetchRequest: Calculation.all,
@@ -18,15 +18,19 @@ struct PreviousCalculationsScreen: View {
   private var calculations
   
   var body: some View {
-    if calculations.isEmpty {
+    ZStack {
       Color(UIColor.systemGroupedBackground)
         .ignoresSafeArea()
-    } else {
-      List {
-        ForEach(calculations) { calculation in
-          CalculationRowView(calculation: calculation)
+      
+      if calculations.isEmpty {
+        Text(LocalizedStrings.App.emptyCalculations)
+      } else {
+        List {
+          ForEach(calculations) { calculation in
+            CalculationRowView(calculation: calculation)
+          }
+          .onDelete(perform: delete)
         }
-        .onDelete(perform: delete)
       }
     }
   }
@@ -35,6 +39,7 @@ struct PreviousCalculationsScreen: View {
 extension PreviousCalculationsScreen {
   private func delete(atOffsets: IndexSet) {
     guard let index = atOffsets.first else { return }
+    
     calculations[index].delete(using: viewContext)
   }
 }
