@@ -5,7 +5,7 @@
 //  Created by Zaid Neurothrone on 2022-10-25.
 //
 
-import Foundation
+import SwiftUI
 
 enum Tab: String {
   case calculate = "Calculate"
@@ -21,6 +21,16 @@ extension Tab: CaseIterable, Identifiable {
       return "cylinder.split.1x2.fill"
     case .previousCalculations:
       return "list.bullet.circle"
+    }
+  }
+  
+  @ViewBuilder
+  var view: some View {
+    switch self {
+    case .calculate:
+      CalculateScreen()
+    case .previousCalculations:
+      PreviousCalculationsScreen()
     }
   }
 }

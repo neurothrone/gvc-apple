@@ -7,23 +7,11 @@
 
 import SwiftUI
 
-private extension Tab {
-  @ViewBuilder
-  var view: some View {
-    switch self {
-    case .calculate:
-      CalculateScreen()
-    case .previousCalculations:
-      PreviousCalculationsScreen()
-    }
-  }
-}
-
 struct ContentView: View {
-  @Environment(\.managedObjectContext) private var viewContext
+  @Environment(\.managedObjectContext) var viewContext
   
   @AppStorage("selectedTab")
-  private var selectedTab: Tab = .calculate
+  var selectedTab: Tab = .calculate
   
   @State private var isAboutSheetPresented = false
   @State private var isDeleteDataAlertPresented = false
@@ -71,12 +59,21 @@ struct ContentView: View {
   private var content: some View {
     TabView(selection: $selectedTab) {
       Group {
-        ForEach(Tab.allCases) { tab in
-          tab.view
-            .tabItem {
-              Label(tab.rawValue, systemImage: tab.systemImageName)
-            }
-        }
+        Tab.calculate.view
+          .tabItem {
+            Label(
+              LocalizedStrings.App.calculateTab,
+              systemImage: Tab.calculate.systemImageName
+            )
+          }
+        
+        Tab.previousCalculations.view
+          .tabItem {
+            Label(
+              LocalizedStrings.App.previousCalculationsTab,
+              systemImage: Tab.previousCalculations.systemImageName
+            )
+          }
       }
       .toolbarBackground(.visible, for: .tabBar)
       .toolbarBackground(Color.accentColor.opacity(0.15), for: .tabBar)
