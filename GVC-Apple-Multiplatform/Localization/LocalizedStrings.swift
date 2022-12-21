@@ -13,6 +13,18 @@ enum LocalizedStrings {
       "Gas Volume Calculator",
       comment: "The title of the app")
     
+    static let calculateTab = NSLocalizedString(
+      "Calculate",
+      comment: "The text on the Calculate Tab")
+    
+    static let previousCalculationsTab = NSLocalizedString(
+      "Previous Calculations",
+      comment: "The text on the Previous Calculations Tab")
+    
+    static let emptyCalculations = NSLocalizedString(
+      "No calculations yet.",
+      comment: "The text for Previous Calculations Screen when there are no calculations.")
+    
     static let aboutLabelText = NSLocalizedString(
       "About",
       comment: "The Menu button label text for the About sheet")

@@ -76,3 +76,12 @@
 "Gas Volume" = "Gasvolym";
 /* Row Calculated at label */
 "Calculated at" = "Beräknat på";
+
+/* The text on the Calculate Tab  */
+"Calculate" = "Beräkna";
+
+/* The text on the Previous Calculations Tab */
+"Previous Calculations" = "Tidigare Beräkningar";
+
+/* The text for Previous Calculations Screen when there are no calculations. */
+"No calculations yet." = "Inga beräkningar än.";

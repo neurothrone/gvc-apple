@@ -14,7 +14,7 @@ struct CalculateScreen: View {
     case pressure
   }
   
-  @Environment(\.managedObjectContext) private var viewContext
+  @Environment(\.managedObjectContext) var viewContext
   @FocusState private var focusedField: Field?
   
   @AppStorage(Constants.AppStorage.selectedNPS)
