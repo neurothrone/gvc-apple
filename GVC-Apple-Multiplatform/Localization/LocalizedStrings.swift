@@ -10,7 +10,7 @@ import SwiftUI
 enum LocalizedStrings {
   struct App {
     static let title = NSLocalizedString(
-      "Gas Volume Calculator",
+      "GasVo",
       comment: "The title of the app")
     
     static let calculateTab = NSLocalizedString(
