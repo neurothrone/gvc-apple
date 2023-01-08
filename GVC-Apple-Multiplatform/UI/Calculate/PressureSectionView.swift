@@ -23,6 +23,9 @@ struct PressureSectionView: View {
         }
       }
       .pickerStyle(.segmented)
+      .listRowBackground(EmptyView())
+      .listRowInsets(EdgeInsets())
+      .listRowSeparator(.hidden)
       
       if selection == .custom {
         CustomTextFieldView(
